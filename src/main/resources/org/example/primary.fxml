@@ -3,53 +3,141 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
+
+<StackPane maxHeight="500.0" maxWidth="400.0" minHeight="500.0" minWidth="400.0" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
    <children>
-      <TextField fx:id="pantalla" prefHeight="50.0" prefWidth="300.0" />
-      <Button fx:id="botonLimpiar" mnemonicParsing="false" onAction="#limpiar" prefHeight="30.0" prefWidth="70.0" text="C">
-         <VBox.margin>
-            <Insets left="270.0" />
-         </VBox.margin>
-      </Button>
-      <GridPane>
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <ImageView fitHeight="500.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/corajeMatematico.png" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" maxWidth="400.0" prefWidth="400.0" spacing="20.0" style="-fx-background-color: transparent;">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
          <children>
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="7" />
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="8" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="9" GridPane.columnIndex="2" />
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="/" GridPane.columnIndex="3" />
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="4" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="0" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" onAction="#calcular" prefHeight="50.0" prefWidth="70.0" text="=" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="50.0" prefWidth="70.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextField fx:id="pantalla" alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="300.0" style="-fx-background-color: rgba(255, 255, 255, 0.82);; -fx-border-color: #9D78BD;; -fx-border-width: 2;; -fx-background-radius: 12;; -fx-border-radius: 12;; -fx-font-size: 24;; -fx-font-weight: bold;;">
+               <VBox.margin>
+                  <Insets right="4.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <Button fx:id="botonLimpiar" mnemonicParsing="false" onAction="#limpiar" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(244, 143, 174, 0.92);; -fx-border-color: #C85D83;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="C">
+               <VBox.margin>
+                  <Insets left="268.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <GridPane hgap="10.0" vgap="20.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(239, 222, 250, 0.82);; -fx-border-color: #C7A8DF;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="7">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(239, 222, 250, 0.82);; -fx-border-color: #C7A8DF;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="8" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: #DDD2EE;" text="9" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(190, 154, 235, 0.88);; -fx-border-color: #8D65BD;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="/" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(239, 222, 250, 0.82);; -fx-border-color: #C7A8DF;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="4" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(239, 222, 250, 0.82);; -fx-border-color: #C7A8DF;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(239, 222, 250, 0.82);; -fx-border-color: #C7A8DF;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(190, 154, 235, 0.88);; -fx-border-color: #8D65BD;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="*" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(239, 222, 250, 0.82);; -fx-border-color: #C7A8DF;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(239, 222, 250, 0.82);; -fx-border-color: #C7A8DF;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(239, 222, 250, 0.82);; -fx-border-color: #C7A8DF;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(190, 154, 235, 0.88);; -fx-border-color: #8D65BD;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(239, 222, 250, 0.82);; -fx-border-color: #C7A8DF;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="0" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(239, 222, 250, 0.82);; -fx-border-color: #C7A8DF;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="." GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#calcular" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(139, 105, 224, 0.92);; -fx-border-color: #6845B5;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="=" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#pulsarBoton" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: rgba(190, 154, 235, 0.88);; -fx-border-color: #8D65BD;; -fx-border-width: 1.5;; -fx-background-radius: 10;; -fx-border-radius: 10;; -fx-font-weight: bold;;" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
          </children>
-      </GridPane>
+      </VBox>
    </children>
-</VBox>
+</StackPane>
